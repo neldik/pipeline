@@ -1,0 +1,17 @@
+meta:
+  version: v0.0.1
+pipeline:
+  input:
+    - name: date_str
+  tasks:
+    - name: convert_date
+      function:
+        name: datetime.datetime.strptime
+        default_args:
+          - format: %Y-%m-%d"
+      input:
+        - name: date_str
+      output:
+        - name: input_date
+  output:
+    - input_date
