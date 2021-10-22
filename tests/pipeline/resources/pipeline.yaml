@@ -12,6 +12,6 @@ pipeline:
       input:
         - name: date_str
       output:
-        - name: input_date
+        - name: output_date
   output:
-    - input_date
+    - output_date
